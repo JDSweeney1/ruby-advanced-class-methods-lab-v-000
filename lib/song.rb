@@ -42,8 +42,9 @@ class Song
 
   def self.alphabetical
     new_order = []
+    newest_order = []
     self.all.collect{|song| new_order << song.name}
-    new_order.sort
+    new_order.sort.collect{|song_name| newest_order << self.find_by_name(song_name)}
 
   end
 end
