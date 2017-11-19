@@ -41,8 +41,6 @@ class Song
   end
 
   def self.alphabetical
-    new_order = []
-    self.all.collect{|song| new_order << song.name}
-    new_order.sort.collect{|song_name| self.find_by_name(song_name)}
+    self.all.sort_by{|song| song.name}
   end
 end
