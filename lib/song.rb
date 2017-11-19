@@ -50,6 +50,6 @@ class Song
     artist = data[0]
     song = self.new
     song.name = name
-    
+
   end
 end
